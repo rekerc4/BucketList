@@ -1,13 +1,14 @@
 "use strict"; 
 
 angular
-.module('app', ["ngRoute", "ngAnimate"]).config(function($routeProvider){
-    $routeProvider
-    .when("/", {
-        template: `<search></search><event></event>`
-      })
-      .when("/bucket", {
-        template: `<bucket></bucket>`
-      })
-      .otherwise({ redirectTo: "/home" });
-}); 
+  .module('app', ["ngRoute", "ngAnimate"])
+  .config(function($routeProvider){
+      $routeProvider
+      .when("/search", {
+          template: `<search-criteria></search-criteria>`
+        })
+        .when("/bucket", {
+          template: `<bucket></bucket>`
+        })
+        .otherwise({ redirectTo: "/search" });
+  }); 

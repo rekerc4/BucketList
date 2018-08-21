@@ -5,5 +5,5 @@ let bucket = {
 }
 
 angular
-.module("app")
-.component("bucket", bucket); 
+    .module("app")
+    .component("bucket", bucket); 
