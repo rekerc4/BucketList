@@ -4,5 +4,6 @@ let bucket = {
     
 }
 
-
-module("app").component("bucket", bucket); 
+angular
+    .module("app")
+    .component("bucket", bucket); 
