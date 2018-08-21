@@ -4,4 +4,6 @@ let event = {
     
 }
 
-module("app").component("event", event);
+angular
+    .module("app")
+    .component("event", event);
