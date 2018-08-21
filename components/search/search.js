@@ -3,6 +3,7 @@
 let searchCriteria = {
     template: `
     <button ng-click="$ctrl.getData();">MAKE THE DATA LOAD</button>
+    <event></event>
     `,
     controller: ["TicketService", function(TicketService) {
         const vm = this;
