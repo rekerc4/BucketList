@@ -2,6 +2,10 @@
 
 function TicketService($http) {
     let vm = this;
+    vm.bucketlist = [{
+        name: "Concert",
+        date: "8-22"
+    }];
     vm.requestData = () => {
         return $http({
         method: "GET",

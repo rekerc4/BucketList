@@ -8,7 +8,7 @@ angular
           template: `<search-criteria></search-criteria>`
         })
         .when("/bucket", {
-          template: `<bucket></bucket>`
+          template: `<bucketlist-page></bucketlist-page>`
         })
         .otherwise({ redirectTo: "/search" });
   }); 
