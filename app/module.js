@@ -1,9 +1,10 @@
 "use strict"; 
 
-module('app', ["ngRoute", "ngAnimate"]).config(function($routeProvider){
+angular
+.module('app', ["ngRoute", "ngAnimate"]).config(function($routeProvider){
     $routeProvider
     .when("/", {
-        templateUrl: `<search></search><event></event>`
+        template: `<search></search><event></event>`
       })
       .when("/bucket", {
         template: `<bucket></bucket>`
