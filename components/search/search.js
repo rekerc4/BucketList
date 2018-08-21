@@ -1,7 +1,19 @@
 "use strict"; 
 
-let search = {
-    
+let searchCriteria = {
+    template: `
+    <button ng-click="$ctrl.getData();">MAKE THE DATA LOAD</button>
+    `,
+    controller: ["TicketService", function(TicketService) {
+        const vm = this;
+        vm.getData = () => {
+            TicketService.requestData().then((response) => {
+                console.log(response.data._embedded.events);
+            });
+        }
+    }]
 }
 
-module("app").component("search", search); 
+angular
+    .module("app")
+    .component("searchCriteria", searchCriteria); 
