@@ -1,21 +1,21 @@
 "use strict";
 
 let event = {
-    template: `<section>
-  <h1>Name: {{ $ctrl.getInfo.events.name }}</h1>
+    bindings: "",
+    template: `<section class="eventList" ng-repeat="info in $ctrl.searchInfo track by $index">
+  <h1>Name: {{ $ctrl.info.events.name }}</h1>
   <p>Promoter: {{ $ctrl.info.events.promoter }}</p>
-  <p>Start Date: {{ $ctrl.info.events.dates.start.localDate }}</p>
-  <p>Location: {{ $ctrl.info.events.dates.start.locale }}</p>
+  <p>Location: {{ $ctrl.info.events.locale }}</p>
+  <img src="{{ $ctrl.info.events.images[0].url }}"
   <a href="$ctrl.info.events.url">View on Ticketmaster</a>
-  <button>Favorite</button>
+  <button class="favBtn" ng-click="$ctrl.favClick();">Favorite</button>
   </section>`,
     controller: ["TicketService", function (TicketService) {
     const vm = this;
-    vm.getInfo = TicketService.requestData().then((response) => {
-        // console.log(vm.getInfo)
-    return response.data._embedded.events;
-    });
-    console.log(vm.getInfo)
+    vm.searchInfo = TicketService.getObjec();
+    vm.favClick = () => {
+    TicketService.bucketlist.push(index);
+    }
     }
     ]
 }
