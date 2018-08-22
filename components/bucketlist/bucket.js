@@ -8,7 +8,7 @@ const bucketlistPage = {
         <section>
         {{info.name}} {{info.dates.start.localDate}} {{info._embedded.venues[0].name}} <a href="{{info.url}}">View on Ticketmaster</a>
         </section>
-        <button ng-click="$ctrl.delete($index);">X</button>
+        <button ng-click="$ctrl.delete($index);"><i class="material-icons">close</i></button>
         </li>
     </ul>
     `,

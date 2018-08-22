@@ -3,8 +3,6 @@
 function TicketService($http, ) {
     let vm = this;
     vm.requestData = (inter, city, fdat, ldat) => {
-        console.log(fdat, ldat);
-        console.log(inter + " " + city + " " + fdat + " " + ldat);
         let interUri = "";
         let cityUri = "";
         let objec = null; 
@@ -26,16 +24,12 @@ function TicketService($http, ) {
           };
 
         let nfdat = fdat.toISOString();
-        console.log(nfdat); 
-        let nldat = encodeURIComponent(ldat.toISOString());  
-        console.log(fdat.toISOString());
+        let nldat = encodeURIComponent(ldat.toISOString());
         if(typeof inter === "string" && typeof city === "string"){
             interUri = encodeURIComponent(inter);
             cityUri = encodeURIComponent(city);
-           console.log(cityUri);
         }
         else{
-            console.log('error'); 
             return;
         }
         return $http({
