@@ -4,6 +4,20 @@
     font-size: 32px; 
 }
 
+html{
+    min-height: 100%;
+}
+
+body{
+    min-height: 100%;
+    position: absolute;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
 button{
     border: none;  
 }
@@ -27,6 +41,58 @@ button{
          url('../coffeehouse.ttf') format('truetype'), /* Safari, Android, iOS */
   }
 
+.ease{
+    height: 10px;
+    overflow: hidden; 
+    position: fixed;
+    z-index: 100;
+    bottom: 0%; 
+}
+
+.ease:hover{
+    height: 75px;
+    width: 100%; 
+}
+
+.title{
+    font-size: 3em; 
+    color: #fff7e7; 
+    text-align: center; 
+    font-family: 'Christopher Hand', sans-serif;
+    margin-top: 10px; 
+}
+
+.subtitle{
+    font-size: 1.2em; 
+    color: #9c6466;
+    text-align: center; 
+    font-family: 'Coffee House', sans-serif; 
+    margin: 0px 0px 40px 0px; 
+}
+
+.search-from{
+    display: grid; 
+    grid-template-columns: 33% 33% 33%; 
+}
+
+.s-label{
+    color: #8d8d8d;
+}
+
+.question-mark{
+    font-size: 1.2em; 
+    color: #9c6466;
+    font-family: 'Christopher Hand', sans-serif;
+    margin: 0px 0px 0px -10px;  
+}
+
+.container{
+    background: linear-gradient(45deg, #3e3e3e, black 90%);
+    min-height: 100%; 
+    position: fixed; 
+    width: 100%; 
+}
+
 .eventList {
     display: flex;
     justify-content: space-around;
@@ -38,7 +104,3 @@ button{
     margin-bottom: 10px;
 }
 
-.title{
-    font-family: 'Christopher Hand', sans-serif;
-    font-size: 1em;
-}

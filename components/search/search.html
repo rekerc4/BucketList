@@ -1,12 +1,25 @@
+<h1 class="title" id="title">EVNT</h1>
+<p class="subtitle" id="subtitle">What do you want to attend <span class="question-mark">?</span></p>
+
 <form action="" class="search-from" id="search-from">
-    <input type="text" placeholder="Enter City Here" ng-model="$ctrl.inp.city" class="city-input" id="city-input">
-    <select type="text" ng-init="$ctrl.inp.interest = ' '" ng-model="$ctrl.inp.interest" class="interest-input" id="interest-input">
+    
+
+
+    <label for="city-entry" class="s-label">City</label>
+    <label for="genre-select" class="s-label">Genre</label>
+    <label for="dates" class="s-label d-label">Dates</label>
+    <input name="city-entry" type="text" placeholder="Enter City Here" ng-model="$ctrl.inp.city" class="city-input" id="city-input">
+
+    <select name="genre-select" type="text" ng-init="$ctrl.inp.interest = ' '" ng-model="$ctrl.inp.interest" class="interest-input" id="interest-input">
         <option value="music">Music</option>
         <option value="sports">Sports</option>
         <option value="comedy">Comedy</option>
         <option value="festival">Festival</option>
     </select>
-    <input type="date" ng-model="$ctrl.fdate.value" class="date-input" id="date-input">
-    <input type="date" ng-model="$ctrl.ldate.value" class="date-input" id="date-input">
+    
+    <div class="dates" id="date">
+        <input type="date" ng-model="$ctrl.fdate.value" class="date-input" id="date-input">
+        <input type="date" ng-model="$ctrl.ldate.value" class="date-input" id="date-input">
+    </div>
     <button ng-click="$ctrl.getData($ctrl.inp.interest, $ctrl.inp.city, $ctrl.fdate.value, $ctrl.ldate.value);">MAKE THE DATA LOAD</button>
 </form>
