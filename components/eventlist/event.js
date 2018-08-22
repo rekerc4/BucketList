@@ -5,18 +5,20 @@ let event = {
     template: `
     <section class="eventList" ng-repeat="info in $ctrl.searchInfo track by $index">
         <img src="{{ info.images[0].url }}">
-        <h1>Name: {{ info.name }}</h1>
-        <p>Date: {{ info.dates.start.localDate }}</p>
-        <p>Venue: {{ info._embedded.venues[0].name }}</p>
+        <h1>{{ info.name }}</h1>
+        <p>{{ info.dates.start.localDate }}</p>
+        <p>{{ info._embedded.venues[0].name }}</p>
         <a href="{{info.url}}">View on Ticketmaster</a>
         <button class="favBtn" ng-click="$ctrl.favClick(info);"><i class="material-icons">star</i></button>
         <button ng-click="$ctrl.moreInfo($index);">More Information</button>
 
         <section class="modal" ng-if="$ctrl.show === $index">
             <img src="{{ info.images[0].url }}">
-            <h1>Name: {{ info.name }}</h1>
-            <p>Date: {{ info.dates.start.localDate }}</p>
-            <p>Venue: {{ info._embedded.venues[0].name }}</p>
+            <h1>{{ info.name }}</h1>
+            <p>{{ info.dates.start.localDate }}</p>
+            <p>{{ info._embedded.venues[0].name }}</p>
+            <p>$ {{ info.priceRanges[0].min || "(No additional price information available)" }}</p>
+            <p>{{ info.ticketLimit.info || "(No additional ticket limit information available)" }}</p>
             <a href="{{info.url}}">View on Ticketmaster</a>
             <button class="favBtn" ng-click="$ctrl.favClick(info);"><i class="material-icons">star</i></button>
             <button ng-click="$ctrl.closeInfo();"><i class="material-icons">clear</i></button>
