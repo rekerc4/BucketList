@@ -4,7 +4,10 @@ const bucketlistPage = {
     template:`
     <ul>
         <li ng-repeat="event in $ctrl.list track by $index">
-        {{event.name}} // {{event.promoter}} // {{event.date}} // {{event.venue}}
+        <img src="">
+        <section>
+        {{event.name}} {{event.promoter}} {{event.date}} {{event.venue}}
+        </section>
         <button ng-click="$ctrl.delete($index);">X</button>
         </li>
     </ul>
