@@ -24,3 +24,4 @@ const bucketlistPage = {
 angular
     .module("app")
     .component("bucketlistPage", bucketlistPage); 
+
