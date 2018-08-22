@@ -22,10 +22,10 @@ function TicketService($http, ) {
               'T' + pad(this.getUTCHours()) +
               ':' + pad(this.getUTCMinutes()) +
               ':' + pad(this.getUTCSeconds()) +
-              '.' + (this.getUTCMilliseconds() / 1000).toFixed(2).slice(2, 5) +
               'Z';
           };
-        let nfdat = fdat.toISOString().replace(/["."]+/g, ':');
+
+        let nfdat = fdat.toISOString();
         console.log(nfdat); 
         let nldat = encodeURIComponent(ldat.toISOString());  
         console.log(fdat.toISOString());
@@ -40,12 +40,12 @@ function TicketService($http, ) {
         }
         return $http({
         method: "GET",
-        url: `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${interUri}&city=${cityUri}&apikey=U7tG9w7O8UpfeSNk3oaR43EUFk1rMyoA`
+        url: `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${interUri}&city=${cityUri}&startDateTime=${nfdat}&endDateTime=${nldat}&apikey=U7tG9w7O8UpfeSNk3oaR43EUFk1rMyoA`
         }).then((response) => {
-            objec = response.data;
-            console.log(objec._embedded.events);
+            vm.objec = response.data;
+            console.log(vm.objec._embedded.events);
             //$location.path();
-            return objec;
+            return vm.objec._embedded.events;
         });
     };
     vm.bucketlist = [
@@ -58,10 +58,10 @@ function TicketService($http, ) {
         date: "9-03"
         }];
     vm.updateObject = (obj) => {
-        objec = obj;
+        vm.objec = obj;
     }
     vm.getObject = () => {
-        return objec;
+        return vm.objec;
     }
 }
 
