@@ -48,15 +48,7 @@ function TicketService($http, ) {
             return vm.objec;
         });
     };
-    vm.bucketlist = [
-        {
-        name: "Concert",
-        date: "8-22"
-        },
-        {
-        name: "Football Game",
-        date: "9-03"
-        }];
+    vm.bucketlist = [];
     vm.updateObject = (obj) => {
         vm.objec = obj;
     }
