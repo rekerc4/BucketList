@@ -38,17 +38,6 @@ function TicketService($http, ) {
             console.log('error'); 
             return;
         }
- 
-      vm.bucketlist = [
-        {
-        name: "Concert",
-        date: "8-22"
-        },
-        {
-        name: "Football Game",
-        date: "9-03"
-        }];
-      
         return $http({
         method: "GET",
         url: `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${interUri}&city=${cityUri}&apikey=U7tG9w7O8UpfeSNk3oaR43EUFk1rMyoA`
@@ -59,6 +48,15 @@ function TicketService($http, ) {
             return objec;
         });
     };
+    vm.bucketlist = [
+        {
+        name: "Concert",
+        date: "8-22"
+        },
+        {
+        name: "Football Game",
+        date: "9-03"
+        }];
     vm.updateObject = (obj) => {
         objec = obj;
     }
