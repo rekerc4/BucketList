@@ -45,7 +45,7 @@ function TicketService($http, ) {
             vm.objec = response.data;
             console.log(vm.objec._embedded.events);
             //$location.path();
-            return vm.objec._embedded.events;
+            return vm.objec;
         });
     };
     vm.bucketlist = [
@@ -61,7 +61,7 @@ function TicketService($http, ) {
         vm.objec = obj;
     }
     vm.getObject = () => {
-        return vm.objec;
+        return vm.objec._embedded.events;
     }
 }
 
