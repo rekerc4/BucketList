@@ -2,7 +2,7 @@
 
 let searchCriteria = {
     templateUrl: 'components/search/search.html',
-    controller: ["TicketService", "$scope", function(TicketService, $scope) {
+    controller: ["TicketService", "$scope", function(TicketService, $scope) { 
         const vm = this;
         vm.data = null;
         vm.fdate = {
