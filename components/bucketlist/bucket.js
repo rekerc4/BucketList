@@ -1,6 +1,7 @@
 "use strict"; 
 
 const bucketlistPage = {
+
     template:`
     <ul>
         <li ng-repeat="info in $ctrl.list track by $index">
