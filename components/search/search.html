@@ -1,6 +1,11 @@
 <form action="" class="search-from" id="search-from">
-    <input type="text" ng-init="$ctrl.inp.interest = 'What are you interested in?'" ng-model="$ctrl.inp.interest" class="interest-input" id="interest-input">
-    <input type="text" ng-init="$ctrl.inp.city='Enter City'" ng-model="$ctrl.inp.city" class="city-input" id="city-input">
+    <input type="text" placeholder="Enter City Here" ng-model="$ctrl.inp.city" class="city-input" id="city-input">
+    <select type="text" ng-init="$ctrl.inp.interest = ' '" ng-model="$ctrl.inp.interest" class="interest-input" id="interest-input">
+        <option value="music">Music</option>
+        <option value="sports">Sports</option>
+        <option value="comedy">Comedy</option>
+        <option value="festival">Festival</option>
+    </select>
     <input type="date" ng-model="$ctrl.fdate.value" class="date-input" id="date-input">
     <input type="date" ng-model="$ctrl.ldate.value" class="date-input" id="date-input">
     <button ng-click="$ctrl.getData($ctrl.inp.interest, $ctrl.inp.city, $ctrl.fdate.value, $ctrl.ldate.value);">MAKE THE DATA LOAD</button>
