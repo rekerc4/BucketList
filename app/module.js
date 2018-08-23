@@ -5,15 +5,15 @@ angular
   .config(function($routeProvider){
       $routeProvider
       .when("/search", {
-        template: ` <section class="container" id="container"></section>
+        template: ` <section class="backgroundGradient" id="backgroundGradient"></section>
         <search-criteria></search-criteria>`
       })
       .when("/bucket", {
-        template: ` <section class="container" id="container"></section>
+        template: ` <section class="backgroundGradient" id="backgroundGradient"></section>
         <bucketlist-page></bucketlist-page>`
       })
       .when("/event", {
-        template: ` <section class="container" id="container"></section>
+        template: ` <section class="backgroundGradient" id="backgroundGradient"></section>
         <event></event>`
       })
       .otherwise({ redirectTo: "/search" });
