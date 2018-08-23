@@ -1,7 +1,7 @@
 <h1 class="title" id="title">EVNT</h1>
 <p class="subtitle" id="subtitle">What do you want to attend <span class="question-mark">?</span></p>
 
-<form action="" class="search-from" id="search-from">
+<!-- <form action="" class="search-from" id="search-from"> -->
     
 
 
@@ -21,5 +21,5 @@
         <input type="date" ng-model="$ctrl.fdate.value" class="date-input" id="date-input">
         <input type="date" ng-model="$ctrl.ldate.value" class="date-input" id="date-input">
     </div>
-    <button ng-click="$ctrl.getData($ctrl.inp.interest, $ctrl.inp.city, $ctrl.fdate.value, $ctrl.ldate.value);">MAKE THE DATA LOAD</button>
-</form>
+    <button type="button" ng-click="$ctrl.getData($ctrl.inp.interest, $ctrl.inp.city, $ctrl.fdate.value, $ctrl.ldate.value);">MAKE THE DATA LOAD</button>
+<!-- </form> -->

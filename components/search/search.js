@@ -2,7 +2,7 @@
 
 let searchCriteria = {
     templateUrl: 'components/search/search.html',
-    controller: ["TicketService", "$scope", function(TicketService, $scope) { 
+    controller: ["TicketService", "$scope", "$location", function(TicketService, $scope, $location) { 
         const vm = this;
         vm.data = null;
         vm.fdate = {
@@ -12,7 +12,9 @@ let searchCriteria = {
             value: new Date(2018, 9, 7)
         }
         vm.getData = (interest, city, fdate, ldate) => {
-            TicketService.requestData(interest, city, fdate, ldate)
+            TicketService.requestData(interest, city, fdate, ldate).then(()=> {
+                $location.path("/event");
+            })
         }
     }]
 }

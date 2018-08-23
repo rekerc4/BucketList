@@ -1,7 +1,7 @@
 * {
     margin: 0px; 
     padding: 0px; 
-    font-size: 32px; 
+    font-size: 32px;
 }
 
 html{
@@ -13,10 +13,10 @@ body{
     position: absolute;
 }
 
-img{
+/* img{
     max-width: 100%;
     max-height: 100%;
-}
+} */
 
 button{
     border: none;  
@@ -41,12 +41,21 @@ button{
          url('../coffeehouse.ttf') format('truetype'), /* Safari, Android, iOS */
   }
 
-.ease{
-    height: 10px;
-    overflow: hidden; 
+
+  element.style {
+}
+.ease:hover {
+    height: 75px;
+    width: 100%;
+}
+
+.ease {
+    height: 1000px;
+    /* overflow: hidden; */
     position: fixed;
     z-index: 100;
-    bottom: 0%; 
+    bottom: 24%;
+    left: 73%;
 }
 
 .ease:hover{
@@ -89,17 +98,96 @@ button{
 .container{
     background: linear-gradient(45deg, #3e3e3e, black 90%);
     min-height: 100%; 
-    position: fixed; 
     width: 100%; 
 }
 
 .eventList {
     display: flex;
-    justify-content: space-around;
-    border-bottom: 1px solid black;
+    flex-wrap: wrap;
+    background-color: #8d8d8d;
+    margin: 50px auto;
+    padding: 20px;
+    width: 75%;
+    border-radius: 20px;
    }
 .favBtn {
     height: 25px;
     width: 75px;
     margin-bottom: 10px;
+}
+.eventInfo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+    margin: 20px;
+    max-width: 50%;
+}
+.eventBtns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+img {
+    width: 400px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+button, .favBtn {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    border-radius: 10px;
+}
+.eventImg {
+position: relative
+}
+.resultsNav {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+    justify-content:  space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 5%;
+    background-color: black;
+    z-index: 999999999;
+}
+.navBtn {
+    width: 25%;
+    padding: 10px 0;
+    margin-top: 35px;
+    background-color: #9c6466;
+}
+.navBtn a {
+    text-decoration: none;
+    color: white;
+}
+.listContainer {
+    margin-top: 122px;
+}
+.modal {
+    color: white;
+    position: fixed;
+    z-index: 99999999999999999999999999999999;
+    background-color: rgb(5, 10, 53);
+    width: 50%;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 5px solid white;
+    top: 70px;
+}
+.modalFavBtn:hover, .closeBtn:hover {
+background-color: darkgray;
+}
+.modalBtns {
+    display: flex;
+    width: 100%;
 }
