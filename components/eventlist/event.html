@@ -1,11 +1,7 @@
 <nav class="resultsNav">
-  <button class="navBtn">
-    <a href="#!/search">SEARCH</a>
-  </button>
+  <button ng-click="$ctrl.changePath('/search')" class="navBtn">SEARCH AGAIN</button>
   <h1 class="title" id="title">EVNT</h1>
-  <button class="navBtn">
-    <a href="#!/bucket">BUCKET</a>
-  </button>
+  <button ng-click="$ctrl.changePath('/bucket')" class="navBtn">BUCKET LIST</button>
 </nav>
 <section class="listContainer">
   <section class="eventList" ng-repeat="info in $ctrl.searchInfo track by $index">
@@ -19,9 +15,7 @@
       <a href="{{info.url}}">View on Ticketmaster</a>
     </section>
     <section class="eventBtns">
-      <button class="favBtn" ng-click="$ctrl.favClick(info);">
-        <i class="material-icons">star</i>
-      </button>
+      <button class="favBtn" ng-click="$ctrl.favClick(info);">Add to Bucket List</button>
       <button class="moreInfoBtn" ng-click="$ctrl.moreInfo($index);">More Information</button>
     </section>
 
@@ -30,18 +24,14 @@
     <img src="{{ info.images[0].url }}">
     <h1>{{ info.name }}</h1>
     <p>{{ info.dates.start.localDate }}</p>
+    <p>Start Time: {{ info.dates.start.localTime }}</p>
     <p>{{ info._embedded.venues[0].name }}</p>
     <p>$ {{ info.priceRanges[0].min || "(No additional price information available)" }}</p>
-    <p>{{ info.ticketLimit.info || "(No additional ticket limit information available)" }}</p>
     <a href="{{info.url}}">View on Ticketmaster</a>
     <section class="modalBtns">
-          <button class="modalFavBtn" ng-click="$ctrl.favClick(info); $ctrl.closeInfo();">
-      <i class="material-icons">star</i>
-    </button>
-    <button  class="closeBtn" ng-click="$ctrl.closeInfo();">
-      <i class="material-icons">clear</i>
-    </button>
+        <button class="modalFavBtn" ng-click="$ctrl.favClick(info); $ctrl.closeInfo();">Add to Bucket List</button>
     </section>
+    <i ng-click="$ctrl.closeInfo();" class="material-icons close">clear</i>
   </section>
 </section>
 </section>

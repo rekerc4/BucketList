@@ -3,7 +3,7 @@
 let event = {
     bindings: "",
     templateUrl: "components/eventlist/event.html",
-    controller: ["TicketService", function (TicketService) {
+    controller: ["TicketService", "$location", function (TicketService, $location) {
         const vm = this;
         vm.show = null;
         vm.searchInfo = TicketService.getObject();
@@ -12,10 +12,12 @@ let event = {
         }
         vm.moreInfo = (index) => {
             vm.show = index;
-            console.log(vm.show)
         }
         vm.closeInfo = () => {
             vm.show = null;
+        }
+        vm.changePath = (path) => {
+            $location.path(path);
         }
 
     }]
