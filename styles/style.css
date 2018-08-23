@@ -174,6 +174,7 @@ button{
     padding: 20px;
     width: 75%;
     border-radius: 20px;
+    opacity: 1;
    }
 .eventList:nth-child(even) {
     background: linear-gradient( #444343cc, #8d8d8daf 90%);
@@ -288,6 +289,32 @@ background-color: darkgray;
 .close:hover {
     color: darkgray;
 }
+
+/* transitions */
+.view-animate.ng-enter, .view-animate.ng-leave {
+    
+    
+}
+
+.view-animate.ng-enter {
+    animation: fadein 1s linear;
+    opacity:0;
+}
+
+.view-animate.ng-leave {
+    animation: fadeout 0s linear;
+
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeout {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+
 .eventTitle {
     font-size:50px;
     font-family: 'Permanent Marker', cursive;
@@ -299,4 +326,5 @@ background-color: darkgray;
 }
 a {
     font-size: 20px;
+
 }

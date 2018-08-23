@@ -15,10 +15,8 @@
                         <a href="{{info.url}}">View on Ticketmaster</a>
                 </section>
                 <section class="eventBtns">
-                        <button class="closeBtn" ng-click="$ctrl.delete($index);">
-                                <i class="material-icons">close</i>
-                        </button>
-                        <button class="moreInfoBtn" ng-click="$ctrl.moreInfo($index);">MORE INFORMATION</button>
+                        <button class="closeBtn" ng-click="$ctrl.delete($index);">Remove From List</button>
+                        <button class="moreInfoBtn" ng-click="$ctrl.moreInfo($index);">More Information</button>
                 </section>
 
                 <section class="modal" ng-if="$ctrl.show === $index">
