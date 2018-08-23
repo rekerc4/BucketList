@@ -152,17 +152,22 @@ button{
     border-radius: 5px; 
     background: #9c6466;
     color: #fff7e7;
+    cursor: pointer;
 
 }
 .eventList {
     display: flex;
     flex-wrap: wrap;
-    background-color: #8d8d8d;
+    background-color: #8d8d8dda;
     margin: 50px auto;
     padding: 20px;
     width: 75%;
     border-radius: 20px;
    }
+.eventList:nth-child(even) {
+    background-color: #8d8d8d5b;
+}
+
 .favBtn {
     height: 25px;
     width: 75px;
@@ -194,6 +199,7 @@ img {
     height: 100%;
     margin: 10px;
     border-radius: 10px;
+    cursor: pointer;
 }
 .eventImg {
 position: relative
@@ -202,12 +208,11 @@ position: relative
     display: flex;
     flex-direction: row;
     margin: auto;
-    width: 90%;
+    width: 100%;
     justify-content:  space-around;
     align-items: center;
     position: fixed;
     top: 0;
-    left: 5%;
     background-color: black;
     z-index: 999999999;
 }
@@ -216,18 +221,23 @@ position: relative
     padding: 10px 0;
     margin-top: 35px;
     background-color: #9c6466;
-}
-.navBtn a {
-    text-decoration: none;
     color: white;
+    border-radius: 10px;
+    font-family: 'Coffee House', sans-serif;
+    cursor: pointer;
 }
+
+.navBtn:hover, .search-btn:hover {
+    background-color: #693536;
+}
+
 .listContainer {
     margin-top: 13%;
 }
 .modal {
     color: white;
     position: fixed;
-    z-index: 99999999999999999999999999999999;
+    z-index: 99999999999999999999;
     background-color: #2d3d4d;
     width: 50%;
     left: 25%;
@@ -236,8 +246,18 @@ position: relative
     flex-direction: column;
     border-radius: 10px;
     border: 5px solid white;
-    top: 70px;
+    top: 20px;
 }
+.modal a, .eventList a {
+    text-decoration: none;
+    color: #309fd3;
+}
+
+.modal a:hover, .eventList a:hover {
+    text-decoration: none;
+    color: #6fc2e9;
+}
+
 .modalFavBtn:hover, .closeBtn:hover, .moreInfoBtn:hover, .favBtn:hover {
 background-color: darkgray;
 }
@@ -246,3 +266,13 @@ background-color: darkgray;
     width: 100%;
 }
 
+.close {
+    position: absolute;
+    right: 2%;
+    font-size: 80px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: darkgray;
+}
