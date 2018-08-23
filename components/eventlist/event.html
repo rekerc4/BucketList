@@ -6,7 +6,7 @@
 <section class="listContainer">
   <section class="eventList" ng-repeat="info in $ctrl.searchInfo track by $index">
     <section class="eventImg">
-      <img src="{{ info.images[0].url }}">
+      <img ng-src="{{ info.images[0].url }}">
     </section>
     <section class="eventInfo">
       <h1>{{ info.name }}</h1>
