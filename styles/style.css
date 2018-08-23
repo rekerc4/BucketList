@@ -115,7 +115,18 @@ button{
     color: #9c6466;
     font-family: 'Christopher Hand', sans-serif;
     margin: 0px 0px 0px -10px;  
+    position: relative;
 }
+
+.trademark{
+    font-size: 20px; 
+    color: #9c6466;
+    font-family: cursive;
+    margin: 10px 0px 0px -3px;
+    position: absolute;
+      
+}
+
 .city-input{
     width: 93%; 
 }
