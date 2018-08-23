@@ -59,7 +59,7 @@ button{
     width: 100%; 
 }
 
-.container{
+.backgroundGradient{
     background: linear-gradient(45deg, #3e3e3e, black 90%);
     min-height: 100%; 
     position: absolute; 
@@ -169,14 +169,14 @@ button{
 .eventList {
     display: flex;
     flex-wrap: wrap;
-    background-color: #8d8d8dda;
+    background: linear-gradient(#8d8d8daf, #444343cc 90%);
     margin: 50px auto;
     padding: 20px;
     width: 75%;
     border-radius: 20px;
    }
 .eventList:nth-child(even) {
-    background-color: #8d8d8d5b;
+    background: linear-gradient( #444343cc, #8d8d8daf 90%);
 }
 
 .favBtn {
@@ -211,6 +211,7 @@ img {
     margin: 10px;
     border-radius: 10px;
     cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
 }
 .eventImg {
 position: relative
@@ -224,7 +225,7 @@ position: relative
     align-items: center;
     position: fixed;
     top: 0;
-    background-color: black;
+    background: linear-gradient(#3e3e3e, black 90%);
     z-index: 999999999;
 }
 .navBtn {
@@ -286,4 +287,16 @@ background-color: darkgray;
 
 .close:hover {
     color: darkgray;
+}
+.eventTitle {
+    font-size:50px;
+    font-family: 'Permanent Marker', cursive;
+}
+.eventP {
+    font-size: 20px;
+    color: rgb(194, 187, 187);
+    font-family: 'Josefin Slab', serif;
+}
+a {
+    font-size: 20px;
 }
