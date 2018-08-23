@@ -9,15 +9,10 @@ html{
 }
 
 body{
+    min-width: 100%;
     min-height: 100%;
     position: absolute;
 }
-
-/* img{
-    max-width: 100%;
-    max-height: 100%;
-} */
-
 button{
     border: none;  
 }
@@ -29,7 +24,7 @@ button{
     font-weight: 400;
     src: url('../fonts/comesinhandy.ttf'); /* IE9 Compat Modes */
     src: local('Christopher Hand'), local('comesinhandy'),
-         url('../comesinhandy.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/comesinhandy.ttf') format('truetype'), /* Safari, Android, iOS */
   }
 
 @font-face {
@@ -38,16 +33,17 @@ button{
     font-weight: 400;
     src: url('../fonts/coffeehouse.ttf'); /* IE9 Compat Modes */
     src: local('Coffee Huse'), local('coffeehouse'),
-         url('../coffeehouse.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/coffeehouse.ttf') format('truetype'), /* Safari, Android, iOS */
   }
 
-
-  element.style {
-}
-.ease:hover {
-    height: 75px;
-    width: 100%;
-}
+  @font-face{
+      font-family: 'Optimus Princeps';
+      font-style: normal;
+      font-weight: 400;
+      src: url('../fonts/optimusprinceps.ttf');
+      src: local('Optimus Princeps'), local('optimusprinceps'),
+          url('../fonts/optimusprinceps.ttf'), format('truetype'),
+  }
 
 .ease {
     height: 1000px;
@@ -63,8 +59,16 @@ button{
     width: 100%; 
 }
 
+.container{
+    background: linear-gradient(45deg, #3e3e3e, black 90%);
+    min-height: 100%; 
+    position: absolute; 
+    width: 100%; 
+    z-index: -1; 
+}
+
 .title{
-    font-size: 3em; 
+    font-size: 3.5em; 
     color: #fff7e7; 
     text-align: center; 
     font-family: 'Christopher Hand', sans-serif;
@@ -81,11 +85,29 @@ button{
 
 .search-from{
     display: grid; 
-    grid-template-columns: 33% 33% 33%; 
+    grid-template-columns: 40% 27% 32%; 
+    width: 85%; 
+    margin: 0px auto 0px auto; 
 }
 
 .s-label{
     color: #8d8d8d;
+    font-family: 'Optimus Princeps', sans-serif; 
+    font-size: 1.35em; 
+}
+
+.g-label{
+    width: 88%; 
+   text-align: center;
+}
+
+.c-label{
+    width: 93%; 
+    text-align: center; 
+}
+
+.d-label{
+    text-align: center;
 }
 
 .question-mark{
@@ -94,13 +116,44 @@ button{
     font-family: 'Christopher Hand', sans-serif;
     margin: 0px 0px 0px -10px;  
 }
-
-.container{
-    background: linear-gradient(45deg, #3e3e3e, black 90%);
-    min-height: 100%; 
-    width: 100%; 
+.city-input{
+    width: 93%; 
 }
 
+.interest-input{
+    width: 88%; 
+}
+
+.date-input{
+    width: 45%; 
+    font-size: 0.5em; 
+}
+
+.input{
+    border: none; 
+    border-radius: 5px; 
+    margin: 25px 0px 0px 0px; 
+}
+
+.dates{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+
+}
+
+.search-btn{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 100px 0px 0px auto;
+    width: 50%;  
+    font-size: 3em; 
+    font-family: 'Coffee House', sans-serif; 
+    border-radius: 5px; 
+    background: #9c6466;
+    color: #fff7e7;
+
+}
 .eventList {
     display: flex;
     flex-wrap: wrap;
@@ -115,6 +168,7 @@ button{
     width: 75px;
     margin-bottom: 10px;
 }
+
 .eventInfo {
     display: flex;
     flex-direction: column;
@@ -191,3 +245,4 @@ background-color: darkgray;
     display: flex;
     width: 100%;
 }
+
