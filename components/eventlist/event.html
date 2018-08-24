@@ -4,8 +4,8 @@
   <button ng-click="$ctrl.changePath('/bucket')" class="navBtn">BUCKET LIST</button>
 </nav>
 <section class="listContainer">
-  <section class="eventList" ng-repeat="info in $ctrl.searchInfo track by $index">
-    <section class="eventImg">
+  <section class="eventList" ng-repeat="info in $ctrl.searchInfo | orderBy: '+dates.start.localDate' track by $index">
+    <section class="eventImg">  
       <img ng-src="{{ info.images[0].url }}">
     </section>
     <section class="eventInfo">
