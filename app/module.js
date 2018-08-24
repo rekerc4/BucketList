@@ -31,7 +31,7 @@ angular
       })
       .when("/event", {
         template: ` <section class="backgroundGradient" id="backgroundGradient"></section>
-        <event></event>`
+        <event-list></event-list>`
       })
       .otherwise({ redirectTo: "/search" });
   }); //The routes
