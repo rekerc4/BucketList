@@ -31,13 +31,8 @@ angular
       })
       .when("/event", {
         template: ` <section class="backgroundGradient" id="backgroundGradient"></section>
-<<<<<<< HEAD:app/module.js
         <event-list></event-list>`
       })
-=======
-        <event></event>`
-      }) 
->>>>>>> development:public/app/module.js
       .otherwise({ redirectTo: "/search" });
   }); //The routes
 

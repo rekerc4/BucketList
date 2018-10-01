@@ -11,7 +11,7 @@ function TicketService($http, $sce, $location) {
        
         if(typeof inter === "string" && typeof city === "string"){
             interUri = encodeURIComponent(inter);
-            cityUri = encodeURIComponent(city);
+            cityUri = city.replace(/\s/g, "+");
         }//encode the interest and city entries as URI 
         else{
             return;
@@ -29,8 +29,7 @@ function TicketService($http, $sce, $location) {
             sensor: 'false', 
             address: `${cityUri}`
         }//set parameters to api call. params is an inbuilt object. 
-
-        console.log(angular.callback); 
+        console.log(cityUri);
         return $http.jsonp(trust, {params: params}).then( (response) => {
             if(!response.data.results[0].geometry.location){
                 console.log("location not found"); 
@@ -51,6 +50,7 @@ function TicketService($http, $sce, $location) {
                                         }//return function if ticket master does not return. 
                                         vm.objec = response.data;//set objec variable to current ticket master api return.
                                         $location.path();//change path.
+                                        console.log(vm.objec);
                                         return vm.objec;//return the object.
                                     });
                     });
